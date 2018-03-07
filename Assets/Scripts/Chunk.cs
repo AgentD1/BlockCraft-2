@@ -57,6 +57,32 @@ public class Chunk {
 
         Mesh finalMesh = new Mesh();
 
+        if(opaqueMesh.vertices.Length == 0) {
+            opaqueMesh.vertices = new Vector3[] {
+                Vector3.zero
+            };
+            opaqueMesh.triangles = new int[] {
+                0,0,0
+            };
+        }
+        if (transparentMesh.vertices.Length == 0) {
+            transparentMesh.vertices = new Vector3[] {
+                Vector3.zero
+            };
+            transparentMesh.triangles = new int[] {
+                0,0,0
+            };
+        }
+        if (alwaysLitMesh.vertices.Length == 0) {
+            alwaysLitMesh.vertices = new Vector3[] {
+                Vector3.zero
+            };
+            alwaysLitMesh.triangles = new int[] {
+                0,0,0
+            };
+        }
+
+
         CombineInstance[] cis = new CombineInstance[] {
             new CombineInstance() {
                 mesh = opaqueMesh,
@@ -72,6 +98,7 @@ public class Chunk {
             }
         };
 
+        Debug.Log(alwaysLitMesh.vertices.Length);
         finalMesh.CombineMeshes(cis,false);
 
         if(finalMesh.subMeshCount < 3) {
