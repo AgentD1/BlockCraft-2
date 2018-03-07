@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9e6b0d209e2e2f04cbff4742dfa45222
+timeCreated: 1520375643
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - parentObject: {instanceID: 0}
+  - emissiveLight: {fileID: 1926875900733830, guid: 43023c591cbb47648823f9ae2d784828,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
