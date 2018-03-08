@@ -98,7 +98,6 @@ public class Chunk {
             }
         };
 
-        Debug.Log(alwaysLitMesh.vertices.Length);
         finalMesh.CombineMeshes(cis,false);
 
         if(finalMesh.subMeshCount < 3) {
